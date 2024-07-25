@@ -1,0 +1,53 @@
+if [ -n $MYZPROFILE ]; then
+  unset MYZPROFILE
+fi
+
+if [ -z $MYZSHRC ]; then
+
+  echo "Initializing the runtime environment (.zshrc)"
+
+  # Oh My Zsh
+  #export ZSH="$HOME/.oh-my-zsh" # Path to your Oh My Zsh installation.
+
+  #ZSH_THEME="robbyrussell" # could set to "random"
+
+  #plugins=(git)
+
+  #source $ZSH/oh-my-zsh.sh
+
+zstyle :compinstall filename '/Users/marioperron/.zshrc' # compinstall
+
+autoload -Uz compinit
+compinit
+
+  if command -v fzf >/dev/null 2>&1; then
+    source <(fzf --zsh) # Configuration for fzf (fuzzy finder)
+  else
+    echo "fzf not installed."
+  fi
+
+  if command -v op >/dev/null 2>&1; then
+    eval "$(op completion zsh)"; compdef _op op # Configuration for 1Password CLI (op)
+  else
+    echo "1Password (op) is not installed."
+  fi
+
+  # History settings
+  setopt appendhistory
+  setopt sharehistory
+  setopt hist_ignore_space
+  setopt hist_ignore_all_dups
+  setopt hist_save_no_dups
+  setopt hist_ignore_dups
+  setopt hist_find_no_dups
+
+  if command -v zoxide >/dev/null 2>&1; then
+    eval "$(zoxide init zsh)" # Configuration for zoxide
+  else
+    echo "zoxide not installed."
+  fi
+
+  # End of script
+
+  export MYZSHRC="TRUE"
+fi

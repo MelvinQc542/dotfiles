@@ -1,0 +1,7 @@
+[user]
+	name = Mario Perron
+	email = marioperron@me.com
+[init]
+	defaultBranch = main
+[core]
+	editor = nvim

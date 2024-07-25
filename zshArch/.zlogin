@@ -1,0 +1,1 @@
+echo "Login script... (.zlogin)"

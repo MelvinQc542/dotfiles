@@ -1,0 +1,39 @@
+import = [
+  # uncomment the flavour you want below:
+  #"~/.config/alacritty/themes/catppuccin_latte.toml"
+  #"~/.config/alacritty/catppuccin_frappe.toml"
+  #"~/.config/alacritty/catppuccin_macchiato.toml"
+  #"~/.config/alacritty/catppuccin_mocha.toml"
+  "~/.config/alacritty/catppuccin.toml"
+  #"~/.config/alacritty/themes/everforest_dark.toml"
+  #"~/.config/alacritty/themes/everforest_light.toml"
+]
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+dimensions = { columns = 132, lines = 35 }
+padding.x = 10
+padding.y = 10
+position = { x = 188, y = 225 }
+
+decorations = "Full"
+#decorations = "None"
+#decorations = "Transparent"
+#decorations = "Buttonless"
+
+# Options are "Dark", "Light" and "None"
+decorations_theme_variant = "None"
+
+opacity = 1.00
+#opacity = 0.25
+blur = true
+
+# This following option breaks the CSA Keyboard
+#option_as_alt = "Both"
+
+[font]
+normal.family = "JetBrainsMono Nerd Font"
+
+size = 20
