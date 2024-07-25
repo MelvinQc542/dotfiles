@@ -1,1 +1,0 @@
-{"name":"eslint_d","schema_version":"1.1","links":{"share":{},"bin":{"eslint_d":"node_modules\/.bin\/eslint_d"},"opt":{}},"secondary_sources":[],"metrics":{"completion_time":1721920166152,"start_time":1721920162700},"primary_source":{"type":"registry+v1","id":"pkg:npm\/eslint_d@13.1.2"}}
