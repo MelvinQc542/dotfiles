@@ -24,7 +24,7 @@ template = '{{.Icon}} '
 type = 'session'
 style = 'plain'
 foreground = 'p:blue'
-template = '{{ .UserName }}@{{ .HostName }} '
+template = ' {{ if .SSHSession }} {{ end }}{{ .UserName }}@{{ .HostName }} '
 
 [[blocks.segments]]
 type = 'path'
