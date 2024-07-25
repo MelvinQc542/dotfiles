@@ -29,9 +29,7 @@ if [ -z $MYZPROFILE ]; then
       zstyle ':vcs_info:*' check-for-changes true
       precmd() { vcs_info }
       setopt prompt_subst
-      #zstyle ':vcs_info:*' formats '| %s(%b)'
-      #zstyle ':vcs_info:git*' formats '| %s %r/%S %b (%a) %m%u%c '
-      zstyle ':vcs_info:git*' formats '| %s %b (%a) %m%u%c '
+      zstyle ':vcs_info:git*' formats '-> %s %b (%a) %m%u%c '
       PS1='%n@%m:%/%f ${vcs_info_msg_0_}%# '
     fi
   else
