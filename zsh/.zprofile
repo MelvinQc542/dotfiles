@@ -20,7 +20,20 @@ if [ -z $MYZPROFILE ]; then
   fi
 
   if command -v oh-my-posh >/dev/null 2>&1; then
-    eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/actual.toml)" # Configuration for oh-my-posh (if installed)
+    if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+      eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/actual.toml)" # Configuration for oh-my-posh (if installed)
+    else
+      echo "oh-my-posh not supported on Apple Terminal"
+      autoload -Uz vcs_info
+      zstyle ':vcs_info:*' enable git svn
+      zstyle ':vcs_info:*' check-for-changes true
+      precmd() { vcs_info }
+      setopt prompt_subst
+      #zstyle ':vcs_info:*' formats '| %s(%b)'
+      #zstyle ':vcs_info:git*' formats '| %s %r/%S %b (%a) %m%u%c '
+      zstyle ':vcs_info:git*' formats '| %s %b (%a) %m%u%c '
+      PS1='%n@%m:%/%f ${vcs_info_msg_0_}%# '
+    fi
   else
     echo "oh-my-posh is not installed."
   fi
@@ -53,12 +66,16 @@ if [ -z $MYZPROFILE ]; then
   # Linux stuff
   alias cd='z'
   alias fzf='fzf --preview="bat --color=always {}"'
-  # Next alias - for only 1 file instead of many (use tab)
-  #alias ivi='vi $(fzf --preview="bat --color=always {}")'
-  alias ivi='vi $(fzf -m --preview="bat --color=always {}")'
   alias ls='eza'
-  alias vi='nvim -O'
-  alias vimtutor='nvim -c Tutor'
+  if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+    alias vi='nvim -O'
+    alias vimtutor='nvim -c Tutor'
+    alias ivi='vi $(fzf -m --preview="bat --color=always {}")'
+    # Next alias - for only 1 file instead of many (use tab)
+    #alias ivi='vi $(fzf --preview="bat --color=always {}")'
+  else
+    alias vi='vim -O'
+  fi
 
   # End of script
 

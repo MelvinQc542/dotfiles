@@ -21,6 +21,19 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     NameLength = 0
 
   [[blocks.segments]]
+    type = 'host'
+    alignment = 'left'
+    template = ' @ {{ .HostName }} '
+    background = 'p:yellow'
+    foreground = 'p:black'
+    Text = ''
+    Duration = 0
+    NameLength = 0
+
+    [blocks.segments.properties]
+      style = 'host'
+
+  [[blocks.segments]]
     type = 'path'
     style = 'powerline'
     powerline_symbol = ''

@@ -1,0 +1,1 @@
+{"name":"beautysh","schema_version":"1.1","links":{"share":{},"bin":{"beautysh":"venv\/bin\/beautysh"},"opt":{}},"secondary_sources":[],"metrics":{"completion_time":1721920132350,"start_time":1721920128240},"primary_source":{"type":"registry+v1","id":"pkg:pypi\/beautysh@6.2.1"}}

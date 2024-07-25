@@ -1088,7 +1088,7 @@
       "Formatter"
     ],
     "source": {
-      "id": "pkg:github/bufbuild/buf@v1.35.0",
+      "id": "pkg:github/bufbuild/buf@v1.35.1",
       "asset": [
         {
           "target": "darwin_x64",
@@ -3184,7 +3184,7 @@
       "Linter"
     ],
     "source": {
-      "id": "pkg:composer/symplify/easy-coding-standard@12.3.2"
+      "id": "pkg:composer/symplify/easy-coding-standard@12.3.3"
     },
     "bin": {
       "ecs": "composer:ecs"
@@ -5192,7 +5192,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:github/elijah-potter/harper@v0.8.8",
+      "id": "pkg:github/elijah-potter/harper@v0.9.0",
       "asset": [
         {
           "target": "linux_x64_gnu",
@@ -7034,7 +7034,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:npm/m68k-lsp-server@0.11.1"
+      "id": "pkg:npm/m68k-lsp-server@0.11.2"
     },
     "bin": {
       "m68k-lsp-server": "npm:m68k-lsp-server"
@@ -8558,7 +8558,7 @@
       "Formatter"
     ],
     "source": {
-      "id": "pkg:github/PHP-CS-Fixer/PHP-CS-Fixer@v3.59.3",
+      "id": "pkg:github/PHP-CS-Fixer/PHP-CS-Fixer@v3.60.0",
       "asset": {
         "file": "php-cs-fixer.phar"
       }
@@ -13541,7 +13541,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:npm/%40vue/language-server@2.0.28",
+      "id": "pkg:npm/%40vue/language-server@2.0.29",
       "extra_packages": [
         "typescript"
       ]

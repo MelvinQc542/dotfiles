@@ -1,0 +1,1 @@
+{"name":"biome","schema_version":"1.1","links":{"share":{"mason-schemas\/lsp\/biome.json":"mason-schemas\/lsp.json"},"bin":{"biome":"node_modules\/.bin\/biome"},"opt":{}},"secondary_sources":[],"metrics":{"completion_time":1721920154520,"start_time":1721920152698},"primary_source":{"type":"registry+v1","id":"pkg:npm\/%40biomejs\/biome@1.8.3"}}
