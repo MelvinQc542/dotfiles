@@ -74,6 +74,10 @@ if [ -z $MYZPROFILE ]; then
   else
     alias vi='vim -O'
   fi
+  #
+  # Other stuff
+  alias dark='ln -sf ~/.config/alacritty/themes/catppuccin_mocha.toml ~/.config/alacritty/actual.toml'
+  alias light='ln -sf ~/.config/alacritty/themes/catppuccin_latte.toml ~/.config/alacritty/actual.toml'
 
   # End of script
 

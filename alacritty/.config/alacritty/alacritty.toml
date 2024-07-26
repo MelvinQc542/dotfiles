@@ -4,7 +4,7 @@ import = [
   #"~/.config/alacritty/catppuccin_frappe.toml"
   #"~/.config/alacritty/catppuccin_macchiato.toml"
   #"~/.config/alacritty/catppuccin_mocha.toml"
-  "~/.config/alacritty/catppuccin.toml"
+  "~/.config/alacritty/actual.toml"
   #"~/.config/alacritty/themes/everforest_dark.toml"
   #"~/.config/alacritty/themes/everforest_light.toml"
 ]
