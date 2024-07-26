@@ -8,7 +8,9 @@ return {
     local alpha = require("alpha")
     local dashboard = require("alpha.themes.startify")
 
-    dashboard.section.header.val = {
+    dashboard.section.header.val = {}
+--[=[
+    {
       [[                                                                       ]],
       [[                                                                       ]],
       [[                                                                       ]],
@@ -25,6 +27,7 @@ return {
       [[                                                                       ]],
       [[                                                                       ]],
     }
+--]=]
 
     alpha.setup(dashboard.opts)
   end,

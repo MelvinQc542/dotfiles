@@ -9,7 +9,9 @@ if not vim.loop.fs_stat(lazypath) then
     lazypath,
   })
 end
+vim.cmd 'colorscheme vim'
 vim.opt.rtp:prepend(lazypath)
 
 require("vim-options")
+require("colorscheme")
 require("lazy").setup("plugins")
