@@ -66,13 +66,11 @@ if [ -z $MYZPROFILE ]; then
   alias fzf='fzf --preview="bat --color=always {}"'
   alias ls='eza'
   if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-    alias vi='nvim -O'
-    alias vimtutor='nvim -c Tutor'
-    alias ivi='vi $(fzf -m --preview="bat --color=always {}")'
+    alias invim='nvim $(fzf -m --preview="bat --color=always {}")'
     # Next alias - for only 1 file instead of many (use tab)
     #alias ivi='vi $(fzf --preview="bat --color=always {}")'
   else
-    alias vi='vim -O'
+    #alias vi='vim'
   fi
   #
   # Other stuff

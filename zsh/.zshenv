@@ -35,6 +35,8 @@ if [ -z $MYZSHENV ]; then
   export _ZO_EXCLUDE_DIRS=$HOME/Library:$HOME/Pictures:$HOME/Movies:/Applications:/System:/Library # zoxide environment variables
 
   export EDITOR="/usr/bin/nvim"
+  export LANG="fr_CA.UTF-8"
+  export LC_ALL="fr_CA.UTF-8"
 
   # Fixing history not usable in other shell windows
   export HISTSIZE=5000
