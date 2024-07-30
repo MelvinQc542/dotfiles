@@ -63,6 +63,7 @@ if [ -z $MYZPROFILE ]; then
   #
   # Linux stuff
   alias cd='z'
+  alias dim='echo -n $COLUMNS;echo -n "x";echo $LINES'
   alias fzf='fzf --preview="bat --color=always {}"'
   alias ls='eza'
   if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
