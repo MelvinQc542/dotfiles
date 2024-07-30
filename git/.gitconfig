@@ -5,3 +5,7 @@
 	defaultBranch = main
 [core]
 	editor = nvim
+[gui]
+	recentrepo = /Users/marioperron/Documents/3ressources/gitRepo/MelvinQc542
+	recentrepo = /Users/marioperron/dotfiles
+	recentrepo = /Users/marioperron/Documents/3ressources/gitRepo/miscTools
