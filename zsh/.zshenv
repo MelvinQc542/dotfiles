@@ -13,7 +13,7 @@ if [ -z $MYZSHENV ]; then
   if [ $ARCH = "Darwin" ]; then # Determine if Mac or...
     # Darwin's default PATH
     # export PATH=/usr/bin:/bin:/usr/sbin:/sbin
-    export PATH=$PATH:$HOME/Documents/3ressources/gitRepo/stuff/Scripts/bash/Darwin
+    export PATH=$PATH:$HOME/Documents/3ressources/gitRepo/miscTools/stuff/Scripts/bash/Darwin
     export PATH=$PATH:$HOME/.local/bin
     export PATH=$PATH:/Library/Apple/usr/bin
     export PATH=$PATH:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
@@ -35,9 +35,11 @@ if [ -z $MYZSHENV ]; then
   export _ZO_EXCLUDE_DIRS=$HOME/Library:$HOME/Pictures:$HOME/Movies:/Applications:/System:/Library # zoxide environment variables
 
   export EDITOR="/usr/bin/nvim"
-  export LANG="fr_CA.UTF-8"
-  export LC_ALL="fr_CA.UTF-8"
-
+  #export LANG="fr_CA.UTF-8"
+  #export LC_ALL="fr_CA.UTF-8"
+  export LANG="en_CA.UTF-8"
+  export LC_ALL="en_CA.UTF-8"
+  
   # Fixing history not usable in other shell windows
   export HISTSIZE=5000
   export HISTFILE=$HOME/.zsh_history

@@ -1,17 +1,3 @@
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
-end
-vim.cmd 'colorscheme vim'
-vim.opt.rtp:prepend(lazypath)
-
-require("vim-options")
-require("colorscheme")
+require("nvim.options")
+require("config.lazy")
 require("lazy").setup("plugins")
