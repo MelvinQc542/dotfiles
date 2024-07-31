@@ -44,12 +44,6 @@ style = 'plain'
 foreground = 'p:lavender'
 template = '{{ .HEAD }} '
 
-[[blocks.segments]]
-style = 'plain'
-foreground = 'p:closer'
-template = ''
-type = 'text'
-
 [blocks.segments.properties]
 branch_icon = ' '
 cherry_pick_icon = ' '
@@ -61,6 +55,12 @@ no_commits_icon = ' '
 rebase_icon = ' '
 revert_icon = ' '
 tag_icon = ' '
+
+[[blocks.segments]]
+style = 'plain'
+foreground = 'p:closer'
+template = ''
+type = 'text'
 
 [[blocks]]
 type = 'rprompt'
