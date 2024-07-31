@@ -73,7 +73,9 @@ if [ -z $MYZPROFILE ]; then
   else
     #alias vi='vim'
   fi
-  #
+  alias tmux2v='tmux new-session -d && tmux split-window -v && tmux select-pane -U && tmux attach-session'
+  alias tmux2h='tmux new-session -d && tmux split-window -h && tmux select-pane -L && tmux attach-session'
+  alias tmux4='tmux new-session -d && tmux split-window -v && tmux split-window -h && tmux select-pane -U && tmux split-window -h && tmux select-pane -L && tmux attach-session'
   # Other stuff
   alias dark='ln -sf ~/.config/alacritty/themes/catppuccin_mocha.toml ~/.config/alacritty/actual.toml'
   alias light='ln -sf ~/.config/alacritty/themes/everforest_light.toml ~/.config/alacritty/actual.toml'

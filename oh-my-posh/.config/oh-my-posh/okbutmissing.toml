@@ -34,6 +34,7 @@ template = '{{ .Path }} '
 
 [blocks.segments.properties]
 style = 'agnoster_short'
+#style = 'folder'
 folder_icon = '....'
 home_icon = '~'
 

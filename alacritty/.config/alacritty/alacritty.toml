@@ -14,10 +14,12 @@ live_config_reload = true
 TERM = "xterm-256color"
 
 [window]
-dimensions = { columns = 80, lines = 25 }
+#dimensions = { columns = 80, lines = 25 } # for a single window
+dimensions = { columns = 161, lines = 52 } # for a tmux-able window
 padding.x = 10
 padding.y = 10
-position = { x = 14, y = 117 }
+#position = { x = 14, y = 115 }  # for a single window
+position = { x = 323, y = 115 } # for a tmux-able window
 
 decorations = "Full"
 #decorations = "None"
@@ -37,4 +39,4 @@ blur = true
 [font]
 normal.family = "JetBrainsMono Nerd Font"
 
-size = 16
+size = 15
