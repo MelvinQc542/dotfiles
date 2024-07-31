@@ -24,6 +24,7 @@ if [ -z $MYZSHENV ]; then
     # Arch's default PATH
     # export PATH=/usr/local/sbin:/usr/local/bin:/usr/bin
     export PATH=$PATH:$HOME/.local/bin
+    export PATH=$PATH:$HOME/Documents/gitRepo/miscTools/stuff/Scripts/zsh
   fi
 
   export PATH=$PATH:/usr/local/bin:/usr/local/sbin # Default linux stuff
