@@ -20,7 +20,7 @@ if [ -z $MYZPROFILE ]; then
   fi
 
   if command -v oh-my-posh >/dev/null 2>&1; then
-    if [ "$TERM_PROGRAM" != "" ] && i[ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+    if [ "$TERM_PROGRAM" != "" ] && [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
       eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/actual.toml)" # Configuration for oh-my-posh (if installed)
     else
       if [ "$TERM_PROGRAM" = "" ]; then
@@ -83,6 +83,7 @@ if [ -z $MYZPROFILE ]; then
   # Other stuff
   alias dark='ln -sf ~/.config/alacritty/themes/catppuccin_mocha.toml ~/.config/alacritty/actual.toml'
   alias light='ln -sf ~/.config/alacritty/themes/everforest_light.toml ~/.config/alacritty/actual.toml'
+  source .zcomplexaliases
 
   # End of script
 

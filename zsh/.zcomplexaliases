@@ -1,0 +1,4 @@
+if [ $ARCH = "Darwin" ]; then
+  #alias tmstatus=tmutil status | awk -F '[ ="]+' '/Percent =/ {printf "%.2f%%\n", $3 * 100}'
+  alias tmstatus='tmutil status | awk -F '\''[ ="]+'\'' '\''/Percent =/ {printf "%.2f%%\n", $3 * 100}'\'
+fi
