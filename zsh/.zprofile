@@ -20,10 +20,14 @@ if [ -z $MYZPROFILE ]; then
   fi
 
   if command -v oh-my-posh >/dev/null 2>&1; then
-    if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+    if [ "$TERM_PROGRAM" != "" ] && i[ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
       eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/actual.toml)" # Configuration for oh-my-posh (if installed)
     else
-      echo "oh-my-posh not supported on Apple Terminal"
+      if [ "$TERM_PROGRAM" = "" ]; then
+        echo -n
+      else
+        echo "oh-my-posh not supported on Apple Terminal"
+      fi
       autoload -Uz vcs_info
       zstyle ':vcs_info:*' enable git svn
       zstyle ':vcs_info:*' check-for-changes true
