@@ -19,7 +19,7 @@ dimensions = { columns = 161, lines = 52 } # for a tmux-able window
 padding.x = 10
 padding.y = 10
 #position = { x = 14, y = 115 }  # for a single window
-position = { x = 323, y = 115 } # for a tmux-able window
+position = { x = 324, y = 113 } # for a tmux-able window
 
 decorations = "Full"
 #decorations = "None"
@@ -29,7 +29,7 @@ decorations = "Full"
 # Options are "Dark", "Light" and "None"
 decorations_theme_variant = "None"
 
-opacity = 0.50
+opacity = 0.95
 #opacity = 0.25
 blur = true
 
