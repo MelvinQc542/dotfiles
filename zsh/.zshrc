@@ -13,3 +13,6 @@ export ZSH="$HOME/.oh-my-zsh" # Path to your Oh My Zsh installation.
 plugins=(git) # Standard plugins can be found in $ZSH/plugins/
 source $ZSH/oh-my-zsh.sh
 source ~/.zshrc.pre-oh-my-zsh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters

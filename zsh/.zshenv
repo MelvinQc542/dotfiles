@@ -47,5 +47,9 @@ if [ -z $MYZSHENV ]; then
   export HISTSAVE=$HISTSIZE
   export HISTDUP="erase"
 
+  if [ $ARCH = "Darwin" ]; then # Determine if Mac or...
+    export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
+  fi
+
   export MYZSHENV="TRUE"
 fi
