@@ -20,6 +20,7 @@ if [ -z $MYZSHENV ]; then
     export PATH=$PATH:/Applications/iTerm.app/Contents/Resources/utilities
     export PATH=$PATH:/Applications/VMware\ Fusion.app/Contents/Public
     export PATH=$PATH:/Applications/kitty.app/Contents/MacOS
+    export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
   else
     # Arch's default PATH
     # export PATH=/usr/local/sbin:/usr/local/bin:/usr/bin
@@ -35,11 +36,13 @@ if [ -z $MYZSHENV ]; then
 
   export _ZO_EXCLUDE_DIRS=$HOME/Library:$HOME/Pictures:$HOME/Movies:/Applications:/System:/Library # zoxide environment variables
 
-  export EDITOR="/usr/bin/nvim"
+  export EDITOR="nvim"
+  export VISUAL="nvim"
   #export LANG="fr_CA.UTF-8"
   #export LC_ALL="fr_CA.UTF-8"
   export LANG="en_CA.UTF-8"
   export LC_ALL="en_CA.UTF-8"
+  export LC_CTYPE="en_CA.UTF-8"
   
   # Fixing history not usable in other shell windows
   export HISTSIZE=5000
@@ -47,9 +50,9 @@ if [ -z $MYZSHENV ]; then
   export HISTSAVE=$HISTSIZE
   export HISTDUP="erase"
 
-  if [ $ARCH = "Darwin" ]; then # Determine if Mac or...
-    export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
-  fi
+  export DEFAULT_USER="$(whoami)"
 
+  export MYPROMPT="oh-my-posh"
+  #export ZSH_THEME="spaceship"
   export MYZSHENV="TRUE"
 fi
