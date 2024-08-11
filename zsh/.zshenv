@@ -12,8 +12,6 @@ if [ -z $MYZSHENV ]; then
 
   export ARCH=$(uname -s)
 
-  # **BEGIN Constructing PATH
-
   if [ $ARCH = "Darwin" ]; then # Determine if Mac or...
     # Darwin's default PATH
     # export PATH=/usr/bin:/bin:/usr/sbin:/sbin
@@ -38,14 +36,13 @@ if [ -z $MYZSHENV ]; then
 
   export PATH=$PATH:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/System/Cryptexes/App/usr/bin # Cryptex
 
-  # **END Constructing PATH
-
   export _ZO_EXCLUDE_DIRS=$HOME/Library:$HOME/Pictures:$HOME/Movies:/Applications:/System:/Library # zoxide environment variables
 
   export EDITOR="nvim"
   export VISUAL="nvim"
   #export LANG="fr_CA.UTF-8"
   #export LC_ALL="fr_CA.UTF-8"
+  #export LC_CTYPE="fr_CA.UTF-8"
   export LANG="en_CA.UTF-8"
   export LC_ALL="en_CA.UTF-8"
   export LC_CTYPE="en_CA.UTF-8"
@@ -59,6 +56,9 @@ if [ -z $MYZSHENV ]; then
   export DEFAULT_USER="$(whoami)"
 
   export MYPROMPT="oh-my-posh"
-  #export ZSH_THEME="spaceship"
+  #export MYPROMPT="starship"
+  if [ "$MYPROMPT" = "starship" ]; then
+    export ZSH_THEME="spaceship"
+  fi
   export MYZSHENV="TRUE"
 fi

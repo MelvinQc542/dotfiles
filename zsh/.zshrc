@@ -1,4 +1,5 @@
 export ZSH="$HOME/.oh-my-zsh" # Path to your Oh My Zsh installation.
+echo "Initializing the runtime environment (.zshrc)"
 
 # ZSH_THEME="robbyrussell" # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )

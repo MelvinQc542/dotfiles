@@ -14,27 +14,6 @@ if [ -z $MYZPROFILE ]; then
     echo "git not installed."
   fi
 
-  if [ $ARCH = "Darwin" ]; then
-    echo "On MacOS..."
-    if command -v brew >/dev/null 2>&1; then
-      eval "$(/usr/local/bin/brew shellenv)" # Configuration for Homebrew
-    else
-      echo "brew is not installed."
-    fi
-    alias 1p='open -a 1Password'
-    alias copilot='open -a Microsoft\ Edge https://copilot.microsoft.com'
-    alias edge='open -a Microsoft\ Edge'
-    alias fdt='open -a Microsoft\ Excel ~/docs/2aires/gesTI.ca/2.\ Aires/2.1\ Gestion\ \&\ Administration/2.1a\ Comptabilité/Feuilles\ de\ temps\ 2024/Outils\ 2024.xlsx'
-    alias lock='clear && open -a ScreenSaverEngine'
-    alias mail='open -a Mail'
-    alias outlook='open -a Microsoft\ Outlook'
-    alias safari='open -a Safari'
-    alias runsudo='echo "$(op item get linux --fields password)" | sudo -S whoami'
-    alias textedit='open -a TextEdit'
-    alias vmarch='open ~/Virtual\ Machines.localized/Arch\ Linux.vmwarevm/Arch\ Linux.vmx'
-    alias word='open -a Microsoft\ Word'
-  fi
-
   if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
     if [ "$MYPROMPT" = "oh-my-posh" ]; then
       echo "oh-my-posh prompt preferred."
@@ -71,26 +50,7 @@ if [ -z $MYZPROFILE ]; then
   zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
   zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
-  # My aliases
-  #
-  # Linux stuff
-  alias cd='z'
-  alias dim='echo -n $COLUMNS;echo -n "x";echo $LINES'
-  alias fzf='fzf --preview="bat --color=always {}"'
-  alias ls='eza'
-  if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-    alias invim='nvim $(fzf -m --preview="bat --color=always {}")'
-    # Next alias - for only 1 file instead of many (use tab)
-    #alias ivi='vi $(fzf --preview="bat --color=always {}")'
-  else
-    #alias vi='vim'
-  fi
-  alias tmux2v='tmux new-session -d \; split-window -v \; select-pane -U \; attach-session'
-  alias tmux2h='tmux new-session -d \; split-window -h \; select-pane -L \; attach-session'
-  alias tmux4='tmux new-session -d \; split-window -v \; split-window -h \; select-pane -U \; split-window -h \; select-pane -L \; attach-session'
-  # Other stuff
-  alias dark='ln -sf ~/.config/alacritty/themes/catppuccin_mocha.toml ~/.config/alacritty/actual.toml'
-  alias light='ln -sf ~/.config/alacritty/themes/everforest_light.toml ~/.config/alacritty/actual.toml'
+  source .zaliases
   source .zcomplexaliases
 
   # End of script
