@@ -4,9 +4,8 @@ fi
 
 if [ -z $MYZSHRC ]; then
 
-<<<<<<< Updated upstream
   if [[ -n "$PS1" ]]; then
-    echo "Initializing the runtime environment (.zshrc)"
+    echo "Initializing the runtime environment (.zshrc.pre-oh-my-zsh)"
 
     # Oh My Zsh
     #export ZSH="$HOME/.oh-my-zsh" # Path to your Oh My Zsh installation.
@@ -21,14 +20,6 @@ if [ -z $MYZSHRC ]; then
 
     autoload -Uz compinit
     compinit
-=======
-  echo "Initializing the runtime environment (.zshrc.pre-oh-my-zsh)"
-
-  zstyle :compinstall filename '/Users/marioperron/.zshrc' # compinstall
-
-  autoload -Uz compinit
-  compinit
->>>>>>> Stashed changes
 
     if command -v fzf >/dev/null 2>&1; then
       source <(fzf --zsh) # Configuration for fzf (fuzzy finder)
@@ -61,39 +52,6 @@ if [ -z $MYZSHRC ]; then
 
     export MYZSHRC="TRUE"
   else
-    
+
   fi
-<<<<<<< Updated upstream
-=======
-
-  if command -v op >/dev/null 2>&1; then
-    eval "$(op completion zsh)"; compdef _op op # Configuration for 1Password CLI (op)
-  else
-    echo "1Password (op) is not installed."
-  fi
-
-  # Remove underlines on command line
-  (( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
-  ZSH_HIGHLIGHT_STYLES[path]=none
-  ZSH_HIGHLIGHT_STYLES[path_prefix]=none
-
-  # History settings
-  setopt appendhistory
-  setopt sharehistory
-  setopt hist_ignore_space
-  setopt hist_ignore_all_dups
-  setopt hist_save_no_dups
-  setopt hist_ignore_dups
-  setopt hist_find_no_dups
-
-  if command -v zoxide >/dev/null 2>&1; then
-    eval "$(zoxide init zsh)" # Configuration for zoxide
-  else
-    echo "zoxide not installed."
-  fi
-
-  # End of script
-
-  export MYZSHRC="TRUE"
->>>>>>> Stashed changes
 fi
