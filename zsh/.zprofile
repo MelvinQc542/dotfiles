@@ -3,8 +3,11 @@ if [ -n $MYZSHENV ]; then
 fi
 
 if [ -z $MYZPROFILE ]; then
-  echo "Configuring the user's profile (.zprofile)"
-
+  if [[ -n "$PS1" ]]; then
+    echo "Configuring the user's profile (.zprofile)"
+  else
+    return
+  fi
   if command -v git >/dev/null 2>&1; then
     plugins=(git)
   else

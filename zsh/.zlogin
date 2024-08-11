@@ -3,7 +3,11 @@ if [ -n $MYZSHRC ]; then
 fi
 
 if [ -z $MYZLOGIN ]; then
-  echo "Login script... (.zlogin)"
+  if [[ -n "$PS1" ]]; then
+    echo "Login script... (.zlogin)"
+  else
+    return
+  fi
   neofetch
   if [ "$TERM_PROGRAM" = "Apple_Terminal" ]; then
     #tmux

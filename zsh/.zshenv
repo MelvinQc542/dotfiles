@@ -1,6 +1,10 @@
 if [ -z $MYZSHENV ]; then
 
-  echo "Defining the environment (.zshenv)"
+  if [[ -n "$PS1" ]]; then
+    echo "Defining the environment (.zshenv)"
+  else
+    
+  fi
  
   # Breakpoint
   # read -s -k "?Press any key to continue."
