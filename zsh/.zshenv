@@ -21,11 +21,13 @@ if [ -z $MYZSHENV ]; then
     export PATH=$PATH:/Applications/VMware\ Fusion.app/Contents/Public
     export PATH=$PATH:/Applications/kitty.app/Contents/MacOS
     export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
+    export ZSHPLUGINS=/usr/local/share
   else
     # Arch's default PATH
     # export PATH=/usr/local/sbin:/usr/local/bin:/usr/bin
     export PATH=$PATH:$HOME/.local/bin
     export PATH=$PATH:$HOME/Documents/gitRepo/miscTools/stuff/Scripts/zsh
+    export ZSHPLUGINS=/usr/share/zsh/plugins
   fi
 
   export PATH=$PATH:/usr/local/bin:/usr/local/sbin # Default linux stuff
