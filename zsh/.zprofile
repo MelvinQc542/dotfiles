@@ -11,29 +11,36 @@ if [ -z $MYZPROFILE ]; then
   if command -v git >/dev/null 2>&1; then
     plugins=(git)
   else
-    echo "...git not installed."
+    echo " - git not installed."
   fi
+
+  source .zaliases
+  source .zcomplexaliases
+
+  (( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
+  ZSH_HIGHLIGHT_STYLES[path]=none
+  ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 
   if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
     if [ "$MYPROMPT" = "oh-my-posh" ]; then
-      echo "...oh-my-posh prompt preferred."
+      echo " - oh-my-posh prompt preferred."
       if command -v oh-my-posh >/dev/null 2>&1; then
         eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/actual.toml)"
       else
-        echo "...oh-my-posh is not installed."
+        echo " - oh-my-posh is not installed."
       fi
     elif [ "$MYPROMPT" = "starship" ]; then
-      echo "...starship prompt preferred."
+      echo " - starship prompt preferred."
       if command -v starship >/dev/null 2>&1; then
         eval "$(starship init zsh)"
       else
-        echo "...starship is not installed."
+        echo " - starship is not installed."
       fi
     else
-      echo "...Prompt setting?"
+      echo " - Prompt setting?"
     fi
   else
-    echo "...On Apple Terminal..."
+    echo " - On Apple Terminal..."
     autoload -Uz vcs_info
     zstyle ':vcs_info:*' enable git svn
     zstyle ':vcs_info:*' check-for-changes true
@@ -49,13 +56,6 @@ if [ -z $MYZPROFILE ]; then
   bindkey '^n' history-search-forward
   zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
   zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-
-  (( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
-  ZSH_HIGHLIGHT_STYLES[path]=none
-  ZSH_HIGHLIGHT_STYLES[path_prefix]=none
-
-  source .zaliases
-  source .zcomplexaliases
 
   # End of script
 
