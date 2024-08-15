@@ -13,18 +13,22 @@ live_config_reload = true
 [env]
 TERM = "xterm-256color"
 
+[font]
+normal.family = "JetBrainsMono Nerd Font"
+
+size = 15
+
 [window]
 #dimensions = { columns = 80, lines = 25 } # for a single window
-dimensions = { columns = 161, lines = 52 } # for a tmux-able window
 padding.x = 10
 padding.y = 10
-#position = { x = 14, y = 115 }  # for a single window
-position = { x = 324, y = 113 } # for a tmux-able window
+position = { x = 18, y = 64 } # for a tmux-able window
+dimensions = { columns = 195, lines = 53 } # for a tmux-able window
 
-decorations = "Full"
+#decorations = "Full"
 #decorations = "None"
 #decorations = "Transparent"
-#decorations = "Buttonless"
+decorations = "Buttonless"
 
 # Options are "Dark", "Light" and "None"
 decorations_theme_variant = "None"
@@ -35,8 +39,3 @@ blur = true
 
 # This following option breaks the CSA Keyboard
 #option_as_alt = "Both"
-
-[font]
-normal.family = "JetBrainsMono Nerd Font"
-
-size = 15

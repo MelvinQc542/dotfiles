@@ -48,6 +48,12 @@ if [ -z $MYZSHRC ]; then
       echo "zoxide not installed."
     fi
 
+    if command -v tmuxifier >/dev/null 2>&1; then
+      eval "$(tmuxifier init -)"
+    else
+      echo "tmuxifier not installed."
+    fi
+
     # End of script
 
     export MYZSHRC="TRUE"

@@ -35,6 +35,7 @@ if [ -z $MYZSHENV ]; then
   export PATH=$PATH:/usr/local/bin:/usr/local/sbin # Default linux stuff
 
   export PATH=$PATH:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/System/Cryptexes/App/usr/bin # Cryptex
+  export PATH=$PATH:$HOME/.tmuxifier/bin
 
   export _ZO_EXCLUDE_DIRS=$HOME/Library:$HOME/Pictures:$HOME/Movies:/Applications:/System:/Library # zoxide environment variables
 
