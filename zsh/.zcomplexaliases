@@ -1,9 +1,15 @@
+alias 1column="awk '{for (i=1; i<=NF; i++) print $i}'"
+distro() {
+    cat /etc/os-release | grep PRETTY_NAME | awk -F'=' '{print $2}' | tr -d '"'
+}
 if [ $ARCH = "Darwin" ]; then
   #alias tmstatus=tmutil status | awk -F '[ ="]+' '/Percent =/ {printf "%.2f%%\n", $3 * 100}'
   alias tmstatus='tmutil status | awk -F '\''[ ="]+'\'' '\''/Percent =/ {printf "%.2f%%\n", $3 * 100}'\'
   alias tmtime='tmutil status | awk -F '\''[ ="]+'\'' '\''/TimeRemaining =/ {printf $3 / 60}'\'
+  alias listpackages="brew list | 1column"
+  alias listcasks="brew list --casks | 1column"
+  alias listformulae="brew list --formulae | 1column"
 fi
-distro() {
-    cat /etc/os-release | grep PRETTY_NAME | awk -F'=' '{print $2}' | tr -d '"'
-}
-alias 1column="awk '{for (i=1; i<=NF; i++) print $i}'"
+if [ $DISTRO = "Arch Linux" ]; then
+  alias listpackages="pacman -Qq"
+fi
