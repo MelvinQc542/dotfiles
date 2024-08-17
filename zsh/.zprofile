@@ -9,7 +9,7 @@ if [ -z $MYZPROFILE ]; then
     return
   fi
   if command -v git >/dev/null 2>&1; then
-    plugins=(git)
+    plugins=(1password brew docker eza fzf git macos node ssh thefuck) # Standard plugins can be found in $ZSH/plugins/
   else
     echo " - git not installed."
   fi

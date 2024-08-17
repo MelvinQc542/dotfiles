@@ -11,24 +11,24 @@ if [ -z $MYZSHENV ]; then
   # echo
 
   export ARCH=$(uname -s)
+  export DISTRO=$(cat /etc/os-release | grep PRETTY_NAME | awk -F'=' '{print $2}' | tr -d '"')
 
   if [ $ARCH = "Darwin" ]; then # Determine if Mac or...
     # Darwin's default PATH
     # export PATH=/usr/bin:/bin:/usr/sbin:/sbin
     export PATH=$PATH:$HOME/Documents/3ressources/gitRepo/miscTools/stuff/Scripts/bash/Darwin
-    export PATH=$PATH:$HOME/.local/bin
-    export PATH=$PATH:/Library/Apple/usr/bin
     export PATH=$PATH:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
     export PATH=$PATH:/Applications/iTerm.app/Contents/Resources/utilities
     export PATH=$PATH:/Applications/VMware\ Fusion.app/Contents/Public
     export PATH=$PATH:/Applications/kitty.app/Contents/MacOS
+    export PATH=$PATH:/Library/Apple/usr/bin
     export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
     export ZSHPLUGINS=/usr/local/share
   else
     # Arch's default PATH
     # export PATH=/usr/local/sbin:/usr/local/bin:/usr/bin
-    export PATH=$PATH:$HOME/.local/bin
     export PATH=$PATH:$HOME/Documents/gitRepo/miscTools/stuff/Scripts/zsh
+    export PATH=$PATH:$HOME/.local/bin
     export ZSHPLUGINS=/usr/share/zsh/plugins
   fi
 

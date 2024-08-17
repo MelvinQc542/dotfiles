@@ -27,6 +27,12 @@ if [ -z $MYZSHRC ]; then
       echo "fzf not installed."
     fi
 
+    if command -v thefuck >/dev/null 2>&1; then
+      eval $(thefuck --alias)
+    else
+      echo "thefuck is not installed."
+    fi
+
     if command -v op >/dev/null 2>&1; then
       eval "$(op completion zsh)"; compdef _op op # Configuration for 1Password CLI (op)
     else

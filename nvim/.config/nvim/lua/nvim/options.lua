@@ -26,7 +26,7 @@ vim.opt.softtabstop = 2
 
 vim.opt.clipboard = "unnamedplus" -- to synchronize nvim and system clipboards
 
-vim.opt.scrolloff = 999
+vim.opt.scrolloff = 10
 
 vim.opt.virtualedit = "block"
 
