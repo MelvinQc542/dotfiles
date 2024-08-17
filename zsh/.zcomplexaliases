@@ -11,5 +11,5 @@ if [ $ARCH = "Darwin" ]; then
   alias listformulae="brew list --formulae | 1column"
 fi
 if [ $DISTRO = "Arch Linux" ]; then
-  alias listpackages="pacman -Qq"
+  alias listpackages="pacman -Qqm"
 fi
