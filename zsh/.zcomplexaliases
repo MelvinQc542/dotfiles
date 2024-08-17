@@ -3,3 +3,6 @@ if [ $ARCH = "Darwin" ]; then
   alias tmstatus='tmutil status | awk -F '\''[ ="]+'\'' '\''/Percent =/ {printf "%.2f%%\n", $3 * 100}'\'
   alias tmtime='tmutil status | awk -F '\''[ ="]+'\'' '\''/TimeRemaining =/ {printf $3 / 60}'\'
 fi
+distro() {
+    cat /etc/os-release | grep PRETTY_NAME | awk -F'=' '{print $2}' | tr -d '"'
+}
