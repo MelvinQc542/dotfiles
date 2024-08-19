@@ -16,7 +16,8 @@ if [ -z $MYZSHENV ]; then
   if [ $ARCH = "Darwin" ]; then # Determine if Mac or...
     # Darwin's default PATH
     # export PATH=/usr/bin:/bin:/usr/sbin:/sbin
-    export PATH=$PATH:$HOME/Documents/3ressources/gitRepo/miscTools/stuff/Scripts/bash/Darwin
+    export PATH=$PATH:$HOME/Documents/3ressources/gitRepo/miscTools/stuff/Scripts/Darwin
+    export PATH=$PATH:$HOME/Documents/3ressources/gitRepo/miscTools/stuff/Scripts/Docker
     export PATH=$PATH:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
     export PATH=$PATH:/Applications/iTerm.app/Contents/Resources/utilities
     export PATH=$PATH:/Applications/VMware\ Fusion.app/Contents/Public
