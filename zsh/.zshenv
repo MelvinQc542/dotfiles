@@ -30,6 +30,7 @@ if [ -z $MYZSHENV ]; then
     # export PATH=/usr/local/sbin:/usr/local/bin:/usr/bin
     export PATH=$PATH:$HOME/Documents/gitRepo/miscTools/stuff/Scripts/zsh
     export PATH=$PATH:$HOME/.local/bin
+    export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/share/zsh/plugins/zsh-syntax-highlighting/highlighters
     export ZSHPLUGINS=/usr/share/zsh/plugins
   fi
 
