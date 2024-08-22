@@ -19,6 +19,7 @@ if [ -z $MYZSHENV ]; then
     export PATH=$PATH:$HOME/Documents/3ressources/gitRepo/miscTools/stuff/Scripts/Darwin
     export PATH=$PATH:$HOME/Documents/3ressources/gitRepo/miscTools/stuff/Scripts/Docker
     export PATH=$PATH:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
+    export PATH=$PATH:/usr/local/opt/libtool/libexec/gnubin
     export PATH=$PATH:/Applications/iTerm.app/Contents/Resources/utilities
     export PATH=$PATH:/Applications/VMware\ Fusion.app/Contents/Public
     export PATH=$PATH:/Applications/kitty.app/Contents/MacOS
